@@ -6,7 +6,7 @@ To update configuration (set host and redirect each n requests) use `/cdn/`
 redirect_each_n_requests <= 0 all requests will be redirected to original host
 
 
-redirect_each_n_requests > 0 every n requests will be redirected to CDN
+redirect_each_n_requests > 0 every n requests will be redirected to original host
 
 # How to run in prod
 
