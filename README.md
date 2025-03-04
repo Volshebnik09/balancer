@@ -1,6 +1,6 @@
 # Small instructs
 
-To update configuration (set host and redirect each n requests) use `/api/v1/cdn`
+To update configuration (set host and redirect each n requests) use `/cdn/`
 
 
 redirect_each_n_requests <= 0 all requests will be redirected to original host
