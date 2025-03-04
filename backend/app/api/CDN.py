@@ -1,7 +1,6 @@
 from fastapi import APIRouter, Depends
 from starlette import status
 
-from database.models import CDN
 from schemas.CDN import UpdateCDNSchema, CDNResponseSchema
 from services.balancer import CDNService
 
