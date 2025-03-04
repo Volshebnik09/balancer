@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from starlette import status
 
 from schemas.CDN import UpdateCDNSchema, CDNResponseSchema
-from services.balancer import CDNService
+from services.CDN import CDNService
 
 router = APIRouter(
     prefix="/cdn",

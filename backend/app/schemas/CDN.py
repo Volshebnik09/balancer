@@ -8,3 +8,6 @@ class UpdateCDNSchema(BaseModel):
 class CDNResponseSchema(BaseModel):
     redirect_each_n_requests: int
     host: str
+
+class BalancerParams(BaseModel):
+    video: str

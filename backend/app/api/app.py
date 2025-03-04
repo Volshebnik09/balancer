@@ -3,7 +3,7 @@ from fastapi.params import Depends
 
 from api import CDN
 from schemas.balancer import BalancerParams
-from services.balancer import CDNService
+from services.CDN import CDNService
 
 app = FastAPI()
 app.include_router(CDN.router)
