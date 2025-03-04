@@ -49,6 +49,5 @@ class CDNService:
         if config.redirect_each_n_requests == 0 or request_counter % config.redirect_each_n_requests == 0:
             request_counter = 0
             return RedirectResponse(url, status_code=301)
-
         return await self.redirect_in_cdn(url)
 

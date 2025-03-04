@@ -1,9 +1,9 @@
-#services:
-#
-#  backend:
-#    volumes:
-#      - ./backend/app:/app
-#
-#  postgresql:
-#    ports:
-#      - "5432:5432"
+services:
+
+  backend:
+    volumes:
+      - ./backend/app:/app
+
+  postgresql:
+    ports:
+      - "5432:5432"
