@@ -1,0 +1,21 @@
+services:
+
+  backend:
+    build: ./backend
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgresql
+
+  postgresql:
+    image: postgres:16.4-bookworm
+    env_file:
+      - .env
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+
+
+volumes:
+  postgresql:
