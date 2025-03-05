@@ -4,7 +4,7 @@ from fastapi.responses import RedirectResponse
 from database.repos.CDN import CDNRepo
 from schemas.CDN import UpdateCDNSchema
 
-request_counter = 0
+REQUEST_COUNTER = 0
 
 class CDNService:
     def __init__(
@@ -41,13 +41,13 @@ class CDNService:
 
 
     async def get_redirect(self, url: str):
-        global request_counter
+        global REQUEST_COUNTER
         config = await self.CDNRepo.get_or_create()
 
-        request_counter+= 1
+        REQUEST_COUNTER+= 1
 
-        if config.redirect_each_n_requests == 0 or request_counter % config.redirect_each_n_requests == 0:
-            request_counter = 0
+        if config.redirect_each_n_requests == 0 or REQUEST_COUNTER % config.redirect_each_n_requests == 0:
+            REQUEST_COUNTER = 0
             return RedirectResponse(url, status_code=301)
         return await self.redirect_in_cdn(url)
 
